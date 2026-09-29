@@ -223,8 +223,8 @@ public class Main {
             System.out.println("\nIngrese una opcion: \n" +
                     "\n1. Cambiar nombre\n " +
                     "\n2. Cambiar precio\n " +
-                    // "\n3. Cambiar cantidad\n " +
-                    // "\n4. Cambiar categoria\n " +
+                     "\n3. Cambiar cantidad\n " +
+                     "\n4. Cambiar categoria\n " +
                     "\n5. Salir ");
 
             opcion = scanner.nextInt();
