@@ -8,10 +8,15 @@ public class Producto {
     private int cantidad;
     private String categoria;
 
-    private static int contador = 0;
-
     public Producto(String nombre, double precio, int cantidad, String categoria) {
-        this.id = ++contador;
+        setNombre(nombre);
+        setPrecio(precio);
+        setCantidad(cantidad);
+        setCategoria(categoria);
+    }
+
+    public Producto(int id, String nombre, double precio, int cantidad, String categoria) {
+        this.id = id;
         setNombre(nombre);
         setPrecio(precio);
         setCantidad(cantidad);
