@@ -10,7 +10,7 @@
 
 Aplicación de consola desarrollada en Java para gestionar un inventario de productos.
 
-Este proyecto forma parte de mi portfolio de Java Backend y representa una evolución respecto a mi proyecto anterior, incorporando una arquitectura más organizada, validación de datos, operaciones CRUD completas y un mayor uso de los principios de Programación Orientada a Objetos.
+Este proyecto forma parte de mi portfolio de Java Backend y representa una evolución respecto a mi proyecto anterior, incorporando una arquitectura organizada, validación de datos, operaciones CRUD completas y persistencia de datos mediante MySQL y JDBC.
 
 ---
 
@@ -18,41 +18,65 @@ Este proyecto forma parte de mi portfolio de Java Backend y representa una evolu
 
 - Agregar productos al inventario.
 - Buscar productos por ID.
+- Listar todos los productos registrados.
 - Actualizar información de un producto.
 - Eliminar productos.
-- Listar todos los productos registrados.
-- Buscar productos por categoría.
-- Mostrar productos con bajo stock.
-- Ordenar productos por nombre.
-- Ordenar productos por precio.
-- Validación de datos al crear y actualizar productos.
+- Actualizar nombre, precio, cantidad y categoría.
+- Persistencia de datos en MySQL.
+- Acceso a la base de datos mediante JDBC.
 
 ---
 
 ## 🛠️ Tecnologías utilizadas
 
 - Java
+- JDBC
+- MySQL
+- Maven
 - IntelliJ IDEA
-- Java Collections Framework
-- Git *(próximamente para control de versiones)*
+- Git
+- GitHub
 
 ---
 
-## 📚 Conceptos de Java aplicados
+## 📚 Conceptos aplicados
 
 Durante el desarrollo de este proyecto se aplicaron los siguientes conceptos:
 
-- Clases y objetos
-- Encapsulamiento
-- Constructores
-- Métodos
-- Getters y Setters
-- Colecciones (`HashMap` y `ArrayList`)
-- CRUD (Create, Read, Update, Delete)
-- Validación de datos
-- Ordenamiento utilizando `Comparator`
-- Búsqueda sobre colecciones
-- Organización del proyecto por capas (`app`, `model`, `service`)
+- Programación Orientada a Objetos.
+- Encapsulamiento.
+- Constructores, métodos, getters y setters.
+- CRUD (Create, Read, Update, Delete).
+- Validación de datos.
+- JDBC.
+- Connection y DriverManager.
+- PreparedStatement.
+- ResultSet.
+- executeQuery() y executeUpdate().
+- Manejo de SQLException.
+- try-with-resources.
+- Parámetros mediante `?` en consultas SQL.
+- Persistencia de datos con MySQL.
+- Organización del proyecto por paquetes.
+
+---
+
+## 🗄️ Base de datos
+
+El proyecto utiliza una base de datos MySQL llamada `inventory_db`.
+
+Tabla principal:
+
+```sql
+CREATE TABLE productos (
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    nombre VARCHAR(100),
+    precio DECIMAL(10,2),
+    cantidad INT,
+    categoria VARCHAR(100)
+);
+
+```
 
 ---
 
@@ -62,6 +86,8 @@ Durante el desarrollo de este proyecto se aplicaron los siguientes conceptos:
 src
 ├── app
 │   └── Main.java
+├── database
+│   └── Conexion.java
 ├── model
 │   └── Producto.java
 └── service
@@ -72,20 +98,19 @@ src
 
 ## ▶️ Cómo ejecutar
 
-1. Clonar el repositorio.
-
-```bash
+1.Clonar el repositorio:
 git clone https://github.com/FerZuliani39/inventory-management-system.git
-```
 
+2.Abrir el proyecto en IntelliJ IDEA.
 
-2. Abrir el proyecto en IntelliJ IDEA.
+3.Tener MySQL instalado y crear la base de datos inventory_db.
 
-3. Ejecutar:
+4.Crear la tabla productos utilizando el script indicado en la sección Base de datos.
 
-```text
+5.Configurar las credenciales de MySQL mediante variables de entorno.
+
+6.Ejecutar:
 src/app/Main.java
-```
 
 ---
 
@@ -93,30 +118,34 @@ src/app/Main.java
 
 Con este proyecto desarrollé conocimientos sobre:
 
-- Diseño de clases.
-- Encapsulamiento.
-- Gestión de objetos mediante colecciones.
-- Implementación de operaciones CRUD.
-- Validación de datos.
-- Organización del código siguiendo una arquitectura sencilla.
+*Diseño y organización de aplicaciones Java.
+*Programación Orientada a Objetos.
+*Implementación de operaciones CRUD.
+*Persistencia de datos con MySQL.
+*Integración de Java con bases de datos mediante JDBC.
+*Uso de consultas parametrizadas.
+*Manejo de resultados mediante ResultSet.
+*Gestión de conexiones y recursos.
+*Organización del código para facilitar su evolución.
 
 ---
 
 ## 🔮 Próximas mejoras
 
-- API REST con Spring Boot.
-- Persistencia con MySQL.
-- Pruebas unitarias con JUnit.
-- Interfaz web.
+*Transacciones con JDBC.
+*Connection Pool.
+*API REST con Spring Boot.
+*Migración de la persistencia hacia JPA / Hibernate.
+*Pruebas unitarias con JUnit.
 
 ---
 ## 📈 Progreso del portfolio
 
 Este proyecto forma parte de mi roadmap de aprendizaje en Java Backend.
 
-- ✅ Proyecto 1: Academic Management System
-- ✅ Proyecto 2: Inventory Management System
-- 🔄 Próximo proyecto: Spring Boot REST API
+✅ Proyecto 1: Academic Management System
+✅ Proyecto 2: Inventory Management System
+🔄 Próximo proyecto: Spring Boot REST API
 
 ## 👨‍💻 Autor
 
