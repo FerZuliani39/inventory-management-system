@@ -98,54 +98,58 @@ src
 
 ## ▶️ Cómo ejecutar
 
-1.Clonar el repositorio:
+1. Clonar el repositorio:
+```bash
 git clone https://github.com/FerZuliani39/inventory-management-system.git
+```
 
-2.Abrir el proyecto en IntelliJ IDEA.
+2. Abrir el proyecto en IntelliJ IDEA.
 
-3.Tener MySQL instalado y crear la base de datos inventory_db.
+3. Tener MySQL instalado y crear la base de datos inventory_db.
 
-4.Crear la tabla productos utilizando el script indicado en la sección Base de datos.
+4. Crear la tabla productos utilizando el script indicado en la sección Base de datos.
 
-5.Configurar las credenciales de MySQL mediante variables de entorno.
+5. Configurar las credenciales de MySQL mediante variables de entorno.
 
-6.Ejecutar:
+6. Ejecutar:
+
+```text
 src/app/Main.java
-
+```
 ---
 
 ## 🎯 Objetivos de aprendizaje
 
 Con este proyecto desarrollé conocimientos sobre:
 
-*Diseño y organización de aplicaciones Java.
-*Programación Orientada a Objetos.
-*Implementación de operaciones CRUD.
-*Persistencia de datos con MySQL.
-*Integración de Java con bases de datos mediante JDBC.
-*Uso de consultas parametrizadas.
-*Manejo de resultados mediante ResultSet.
-*Gestión de conexiones y recursos.
-*Organización del código para facilitar su evolución.
+- Diseño y organización de aplicaciones Java.
+- Programación Orientada a Objetos.
+- Implementación de operaciones CRUD.
+- Persistencia de datos con MySQL.
+- Integración de Java con bases de datos mediante JDBC.
+- Uso de consultas parametrizadas.
+- Manejo de resultados mediante ResultSet.
+- Gestión de conexiones y recursos.
+- Organización del código para facilitar su evolución.
 
 ---
 
 ## 🔮 Próximas mejoras
 
-*Transacciones con JDBC.
-*Connection Pool.
-*API REST con Spring Boot.
-*Migración de la persistencia hacia JPA / Hibernate.
-*Pruebas unitarias con JUnit.
+- Transacciones con JDBC.
+- Connection Pool.
+- API REST con Spring Boot.
+- Migración de la persistencia hacia JPA / Hibernate.
+- Pruebas unitarias con JUnit.
 
 ---
 ## 📈 Progreso del portfolio
 
 Este proyecto forma parte de mi roadmap de aprendizaje en Java Backend.
 
-✅ Proyecto 1: Academic Management System
-✅ Proyecto 2: Inventory Management System
-🔄 Próximo proyecto: Spring Boot REST API
+- ✅ Proyecto 1: Academic Management System
+- ✅ Proyecto 2: Inventory Management System
+- 🔄 Próximo proyecto: Spring Boot REST API
 
 ## 👨‍💻 Autor
 
